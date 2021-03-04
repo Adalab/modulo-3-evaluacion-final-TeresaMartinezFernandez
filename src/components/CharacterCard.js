@@ -1,26 +1,27 @@
 import React from "react";
-import CharacterDetail from "./CharacterDetail";
+import { Link } from "react-router-dom";
+
 // import PropTypes from "prop-types";
 
 function CharacterCard(props) {
-  // console.log(props.character.episode.length);
+  console.log(props.character.id);
   return (
     <>
-      <img
-        className="card__img"
-        src={props.character.image}
-        alt={`Foto de ${props.character.name}`}
-        title={`Foto de ${props.character.name}`}
-      />
-      <h4 className="card__title">{props.character.name}</h4>
-      <p className="card__description">{props.character.species}</p>
-      {/* <CharacterDetail /> */}
+      <Link to={`/character/${props.character.id}`}>
+        <img
+          className="card__img"
+          src={props.character.image}
+          alt={`Foto de ${props.character.name}`}
+          title={`Foto de ${props.character.name}`}
+        />
+        <h4 className="card__title">{props.character.name}</h4>
+        <p className="card__description">{props.character.species}</p>
+      </Link>
     </>
   );
 }
 // CharacterCard.PropTypes = {
-//   name: PropTypes.string,
-//   species: PropTypes.string,
+//   character: PropTypes.object,
 // };
 
 export default CharacterCard;
