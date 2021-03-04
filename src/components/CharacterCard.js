@@ -1,20 +1,26 @@
 import React from "react";
+import CharacterDetail from "./CharacterDetail";
+// import PropTypes from "prop-types";
 
 function CharacterCard(props) {
+  // console.log(props.character.episode.length);
   return (
     <>
       <img
         className="card__img"
-        src="https://i.pinimg.com/474x/6e/04/93/6e04932f60b65dd2872ec241fe755e6f.jpg"
-        alt="foto de mujer"
+        src={props.character.image}
+        alt={`Foto de ${props.character.name}`}
+        title={`Foto de ${props.character.name}`}
       />
-      <h4 className="card__title">Nombre Apellido</h4>
-      <p className="card__description">ciudad / genero</p>
-      <p className="card__description">ciudad / genero</p>
-      <p className="card__description">ciudad / genero</p>
-      <p className="card__description">ciudad / genero</p>
+      <h4 className="card__title">{props.character.name}</h4>
+      <p className="card__description">{props.character.species}</p>
+      {/* <CharacterDetail /> */}
     </>
   );
 }
+// CharacterCard.PropTypes = {
+//   name: PropTypes.string,
+//   species: PropTypes.string,
+// };
 
 export default CharacterCard;
