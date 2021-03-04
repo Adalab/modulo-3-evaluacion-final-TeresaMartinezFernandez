@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // import PropTypes from "prop-types";
 
 function CharacterCard(props) {
-  console.log(props.character.id);
+  // console.log(props.character);
   return (
     <>
       <Link to={`/character/${props.character.id}`}>

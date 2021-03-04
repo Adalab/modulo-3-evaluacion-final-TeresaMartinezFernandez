@@ -2,36 +2,50 @@ import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Filters from "./Filters";
 import getDataFromApi from "../services/getDataFromApi";
-import FilterByName from "./FilterByName";
 import CharacterList from "./CharacterList";
 import logo from "../images/logo.png";
 import CharacterDetail from "./CharacterDetail";
-import userEvent from "@testing-library/user-event";
 
 // console.log(getDataFromApi());
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
   const [nameFilter, setNameFilter] = useState("");
+  const [speciesFilter, setSpeciesFilter] = useState("all");
   useEffect(() => {
     getDataFromApi().then((data) => {
       setCharacters(data);
     });
   }, []);
-  // console.log(characters);
+  console.log(characters);
 
   //event handlers
 
-  const handleFilter = (data, filterKey) => {
-    // console.log("manejando los inputs", data, filterKey);
-    setNameFilter(data.value);
+  const handleFilter = (inputFilter) => {
+    console.log(inputFilter);
+    if (inputFilter.key === "name") {
+      setNameFilter(inputFilter.value);
+    } else if (inputFilter.key === "species") {
+      setSpeciesFilter(inputFilter.value);
+    }
   };
   // console.log(nameFilter);
+  // console.log(speciesFilter);
 
-  const filteredCharacters = characters.filter((character) => {
-    return character.name.toUpperCase().includes(nameFilter.toUpperCase());
-  });
-  // console.log(filteredCharacters);
+  const filteredCharacters = characters
+    .filter((character) => {
+      // console.log(character.species);
+      return character.name.toUpperCase().includes(nameFilter.toUpperCase());
+    })
+    .filter((character) => {
+      // console.log(character.species);
+      if (speciesFilter === "all") {
+        return true;
+      } else {
+        return speciesFilter === character.species;
+      }
+    });
+  console.log(filteredCharacters);
 
   //render tarjeta de personaje
 

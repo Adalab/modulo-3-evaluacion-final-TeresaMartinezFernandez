@@ -5,9 +5,6 @@ function CharacterDetail(props) {
   console.log(props);
   return (
     <>
-      <header>
-        <h1 className="title--big">Personajes Rick and Morty </h1>
-      </header>
       <main>
         <Link to="/">
           <span>volver</span>
@@ -26,7 +23,6 @@ function CharacterDetail(props) {
           <p className="card__description">{`episodes: ${props.character.episode.length}`}</p>
         </section>
       </main>
-      <footer>HAsta luego Mari CArmen</footer>
     </>
   );
 }
