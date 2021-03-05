@@ -3,15 +3,14 @@ import CharacterCard from "./CharacterCard";
 
 function CharacterList(props) {
   const characterElements = props.characters.map((character) => {
-    // console.log(character);
     return (
-      <li className="card" key={character.id}>
+      <li key={character.id}>
         <CharacterCard character={character} />
       </li>
     );
   });
   return (
-    <section>
+    <section className="list__container">
       <ul className="cards">{characterElements}</ul>
     </section>
   );

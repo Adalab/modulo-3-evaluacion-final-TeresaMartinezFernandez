@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../stylesheets/App.scss";
 function FilterByName(props) {
   const handleChange = (ev) => {
     ev.preventDefault();
@@ -10,7 +10,7 @@ function FilterByName(props) {
   };
   return (
     <>
-      <label className="form__label display-block" htmlFor="name">
+      <label className="form__label" htmlFor="name">
         Filtrar por nombre:
       </label>
       <input

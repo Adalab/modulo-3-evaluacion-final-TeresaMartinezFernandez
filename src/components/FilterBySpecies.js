@@ -1,17 +1,17 @@
 import React from "react";
+import "../stylesheets/App.scss";
 
 function FilterBySpecies(props) {
   const handleChange = (ev) => {
     props.handleFilter({
-      value: ev.target.value,
       key: "species",
+      value: ev.target.value,
     });
-    // console.log(ev.target.value);
   };
 
   return (
     <>
-      <label className="form__label display-block" htmlFor="species">
+      <label className="form__label" htmlFor="species">
         Filtrar por especie:
       </label>
       <select
@@ -21,8 +21,8 @@ function FilterBySpecies(props) {
         onChange={handleChange}
       >
         <option value="all">Todos</option>
-        <option value="human">Humano</option>
-        <option value="alien">Alien</option>
+        <option value="Human">Humano</option>
+        <option value="Alien">Alien</option>
       </select>
     </>
   );
