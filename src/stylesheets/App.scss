@@ -1,19 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-ul {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-}
-
 .header {
   position: relative;
   top: 0;
+  border: 5px solid #53abee;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,118 +15,29 @@ a {
 }
 .main {
   position: relative;
-  top: 30px;
-  height: 100vh;
-}
-.filters__form {
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 15px;
-}
-.form__label {
-  display: block;
-  margin: 3px;
-  font-family: "Handlee", cursive;
-}
-.form__input-text {
-  border-radius: 20px;
-  border: 1px solid crimson;
-  font-family: "Handlee", cursive;
-  text-align: center;
-}
-.list__container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.cards {
-  font-family: "Handlee", cursive;
-  width: 60vw;
-  display: grid;
-  row-gap: 10px;
-  justify-items: center;
-  align-items: center;
-
-  @media all and (min-width: 768px) {
-    rid-template-columns: repeat(2, 1fr);
-  }
-  @media all and (min-width: 1200px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-.character__card {
-  padding: 20px;
-  margin-left: 30px;
-  border: 1px solid rgb(54, 143, 202);
-  border-radius: 20px;
-  width: 300px;
-  &--img {
-    width: 250px;
-    border-radius: 20px;
-  }
-
-  &--title {
-    color: black;
-    text-align: center;
-  }
-  &--description {
-    color: black;
-    text-align: center;
-  }
-}
-
-.card {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  &__button {
-    width: 200px;
-    border-radius: 20px;
-    border: 1px solid rgb(54, 143, 202);
-    padding: 15px;
-    font-family: "Handlee", cursive;
-    font-size: 20px;
-    color: black;
-    cursor: pointer;
-  }
-}
-.fa-arrow-left {
-  background-color: black;
-}
-.card__detail {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  border: 1px solid rgb(54, 143, 202);
-  padding: 15px;
-  &--img {
-    border-radius: 20px;
-  }
-  &--title {
-    font-family: "Handlee", cursive;
-    text-align: center;
-  }
-  &--description {
-    font-family: "Handlee", cursive;
-    text-align: center;
-  }
+  padding: 25px;
+  height: auto;
+  width: 100vw;
+  background-image: linear-gradient(
+    to right,
+    rgb(172, 238, 183),
+    rgb(54, 143, 202)
+  );
 }
 
 .footer {
   position: relative;
   bottom: 0;
-  width: 100%;
-  height: 60px;
+  width: 100vw;
+  height: 50px;
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding-left: 25px;
+  background-color: rgb(54, 143, 202);
+  &__text {
+    font-family: "Handlee", cursive;
+    text-align: left;
+    font-size: 12px;
+  }
 }

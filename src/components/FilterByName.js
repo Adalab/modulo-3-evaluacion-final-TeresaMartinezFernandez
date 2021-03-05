@@ -1,5 +1,7 @@
 import React from "react";
 import "../stylesheets/App.scss";
+import "../stylesheets/filters.scss";
+
 function FilterByName(props) {
   const handleChange = (ev) => {
     ev.preventDefault();

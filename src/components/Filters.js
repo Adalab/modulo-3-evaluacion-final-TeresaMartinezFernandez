@@ -2,6 +2,7 @@ import React from "react";
 import FilterByName from "./FilterByName";
 import FilterBySpecies from "./FilterBySpecies";
 import "../stylesheets/App.scss";
+import "../stylesheets/filters.scss";
 
 function Filters(props) {
   return (

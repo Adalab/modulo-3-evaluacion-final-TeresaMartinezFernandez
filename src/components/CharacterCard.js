@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "../stylesheets/App.scss";
+import "../stylesheets/charactercard.scss";
 
 function CharacterCard(props) {
-  // console.log(props);
   return (
     <>
       <Link to={`/character/${props.character.id}`}>

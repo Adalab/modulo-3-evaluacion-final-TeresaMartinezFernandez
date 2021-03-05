@@ -1,0 +1,20 @@
+.character__card {
+  padding: 20px;
+  margin-left: 30px;
+  border: 3px solid rgb(54, 143, 202);
+  border-radius: 20px;
+  width: 300px;
+  &--img {
+    width: 250px;
+    border-radius: 20px;
+  }
+
+  &--title {
+    color: black;
+    text-align: center;
+  }
+  &--description {
+    color: black;
+    text-align: center;
+  }
+}

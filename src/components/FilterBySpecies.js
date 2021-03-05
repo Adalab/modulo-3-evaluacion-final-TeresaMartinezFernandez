@@ -1,5 +1,6 @@
 import React from "react";
 import "../stylesheets/App.scss";
+import "../stylesheets/filters.scss";
 
 function FilterBySpecies(props) {
   const handleChange = (ev) => {

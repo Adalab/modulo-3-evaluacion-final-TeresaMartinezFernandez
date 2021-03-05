@@ -1,0 +1,20 @@
+.list__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards {
+  font-family: "Handlee", cursive;
+  width: 60vw;
+  display: grid;
+  row-gap: 10px;
+  justify-items: center;
+  align-items: center;
+
+  @media all and (min-width: 768px) {
+    rid-template-columns: repeat(2, 1fr);
+  }
+  @media all and (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

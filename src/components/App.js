@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import "../stylesheets/App.scss";
+import "../stylesheets/reset.scss";
 import Filters from "./Filters";
 import getDataFromApi from "../services/getDataFromApi";
 import CharacterList from "./CharacterList";
 import logo from "../images/logo.png";
 import CharacterDetail from "./CharacterDetail";
-
-// console.log(getDataFromApi());
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -41,7 +40,6 @@ const App = () => {
         return character.species === speciesFilter;
       }
     });
-  // console.log(filteredCharacters);
 
   //render character detail card
 
@@ -74,7 +72,12 @@ const App = () => {
           <Route path="/character/:id" render={renderCharacterDetail} />
         </Switch>
       </main>
-      <footer className="footer">hasta luego mari Carmen</footer>
+      <footer className="footer">
+        <span className="footer__text">
+          <i class="fa fa-copyright" aria-hidden="true"></i>
+          2021 Todos los derechos reservados...hasta luego Mari Carmen
+        </span>
+      </footer>
     </>
   );
 };
