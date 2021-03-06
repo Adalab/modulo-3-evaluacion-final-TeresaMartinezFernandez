@@ -75,7 +75,8 @@ const App = () => {
       <footer className="footer">
         <span className="footer__text">
           <i class="fa fa-copyright" aria-hidden="true"></i>
-          2021 Todos los derechos reservados...hasta luego Mari Carmen
+          2021 Todos los derechos reservados...hasta luego Mari Carmen{" "}
+          <i class="fas fa-laugh"></i>
         </span>
       </footer>
     </>

@@ -10,6 +10,7 @@ function FilterByName(props) {
       key: "name",
     });
   };
+
   return (
     <>
       <label className="form__label" htmlFor="name">

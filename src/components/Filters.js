@@ -5,6 +5,7 @@ import "../stylesheets/App.scss";
 import "../stylesheets/filters.scss";
 
 function Filters(props) {
+  console.log(props);
   return (
     <section>
       <form className="filters__form">
