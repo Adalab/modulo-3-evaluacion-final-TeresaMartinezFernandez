@@ -9,7 +9,10 @@ function Filters(props) {
   return (
     <section>
       <form className="filters__form">
-        <FilterByName handleFilter={props.handleFilter} />
+        <FilterByName
+          handleFilter={props.handleFilter}
+          nameFilter={props.nameFilter}
+        />
         <FilterBySpecies handleFilter={props.handleFilter} />
       </form>
     </section>

@@ -44,12 +44,16 @@ const App = () => {
   //render character detail card
 
   const renderCharacterDetail = (props) => {
+    console.log(props);
     const characterId = parseInt(props.match.params.id);
     const selectCharacter = characters.find((character) => {
       return character.id === characterId;
     });
-
-    return <CharacterDetail character={selectCharacter} />;
+    if (selectCharacter === undefined) {
+      return <p>El personaje no se ha encontrado</p>;
+    } else {
+      return <CharacterDetail character={selectCharacter} />;
+    }
   };
 
   return (
@@ -66,7 +70,7 @@ const App = () => {
       <main className="main">
         <Switch>
           <Route exact path="/">
-            <Filters handleFilter={handleFilter} />
+            <Filters handleFilter={handleFilter} nameFilter={nameFilter} />
             <CharacterList characters={filteredCharacters} />
           </Route>
           <Route path="/character/:id" render={renderCharacterDetail} />
